@@ -19,6 +19,7 @@ def pole():
         print("  --------------- ")
     print()
 
+#ввод координат и их проверерка на соответствие
 def data():
     while True:
         cords = input("         Ваш ход: ").split()
@@ -44,7 +45,8 @@ def data():
             continue
         
         return x, y
-            
+
+#проверка условия выигрышной комбинации            
 def uslovie():
     win_cord = (((0, 0), (0, 1), (0, 2)), ((1, 0), (1, 1), (1, 2)), ((2, 0), (2, 1), (2, 2)),
                 ((0, 2), (1, 1), (2, 0)), ((0, 0), (1, 1), (2, 2)), ((0, 0), (1, 0), (2, 0)),
@@ -61,6 +63,7 @@ def uslovie():
             return True
     return False
 
+#тело игры
 privet()
 field = [[" "] * 3 for i in range(3) ]
 shag = 0
